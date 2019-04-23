@@ -10,7 +10,21 @@
             "email": "mail@denisyilmaz.de"
         }
     ],
+    "autoload": {
+        "files": [
+            "config.php"
+        ]
+    },
     "require": {
         "getkirby/composer-installer": "^1.1"
-    }
+    },
+    "require-dev": {},
+    "scripts": {
+        "build": "composer update --ignore-platform-reqs; composer dumpautoload -o;",
+        "zip": "rm kirby-oembed.zip; composer update --ignore-platform-reqs; composer dumpautoload -o; zip -r kirby-oembed.zip . -x *.git*; composer dumpautoload -o;"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "beta"
 }
