@@ -1,0 +1,16 @@
+{
+    "name": "denisyilmaz/oembed",
+    "description": "Kirby 3 oEmbed Field",
+    "version": "0.0.0",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Denis Yilmaz",
+            "email": "mail@denisyilmaz.de"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    }
+}
