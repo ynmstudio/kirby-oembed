@@ -10,11 +10,6 @@
             "email": "mail@denisyilmaz.de"
         }
     ],
-    "autoload": {
-        "files": [
-            "config.php"
-        ]
-    },
     "require": {
         "getkirby/composer-installer": "^1.1"
     },

@@ -1,5 +1,12 @@
 <?php
+@include_once __DIR__ . '/vendor/autoload.php';
 
 Kirby::plugin('denisyilmaz/oembed', [
-    // plugin magic happens here
+    'fields' => [
+        'oembed' => [
+            'props' => [
+                'message' => '<k-oembed-field></k-oembed-field>'
+            ]
+        ]
+    ]
 ]);
