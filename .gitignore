@@ -3,6 +3,11 @@
 
 # npm modules
 /node_modules
+npm-debug.log
 
 # Composer files
 /vendor
+
+# Packed Plugin
+/kirby-oembed.zip
+
