@@ -1,29 +1,17 @@
 <template>
-  <k-field
-    :label="label"
-    class="oembed-field"
-    :class="classObject"
-    v-on-click-outside="onClickOutside"
-  >
-    <div class="oembed-field__input">
-      <k-input
-        class="oembed-field__text-input"
-        v-model="oembedUrl"
-        name="text"
-        type="text"
-        theme="field"
-        @focus="open"
-      />
+  <k-field :label="label" class="color-field" v-on-click-outside="onClickOutside">
+    <div class="color-field__input">
+      <k-url-field v-model="color" name="url" label="Url" theme="field" @focus="open"/>
     </div>
     <k-input v-model="color"></k-input>
-    <div class="oembed-field__wrapper" v-show="active">
+    <div class="color-field__wrapper" v-show="active">
       <VEmbed :id="gist" :options="{ emoji: true }">
         <p>https://gist.github.com/yyx990803/7cfec746bb8cd6ae05e72f30104c0d51</p>
       </VEmbed>
-      <!-- <oembed-preview
+      <!-- <color-preview
         v-model="color"
-        class="oembed-field__picker"
-        :class="{'oembed-field__picker--no-alpha': !editableAlpha}"
+        class="color-field__picker"
+        :class="{'color-field__picker--no-alpha': !editableAlpha}"
       />-->
     </div>
   </k-field>
@@ -72,7 +60,7 @@ export default {
     }
   },
   computed: {
-    oembedUrl: {
+    color: {
       get() {
         if (typeof this.color === "object") {
           if (!this.editableAlpha && this.color.a < 1) {
@@ -91,7 +79,7 @@ export default {
   watch: {
     url(url, oldUrl) {
       if (oldUrl) {
-        this.$emit("input", this.oembedUrl);
+        this.$emit("input", this.color);
       }
     }
   }
@@ -99,7 +87,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.oembed-field {
+.color-field {
   position: relative;
 
   &__text-input {
@@ -142,7 +130,7 @@ export default {
 </style>  
 
 <style lang="stylus">
-.oembed-field__picker {
+.color-field__picker {
   .vc-chrome-color-wrap {
     display: none;
   }

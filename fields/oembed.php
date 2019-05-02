@@ -1,11 +1,7 @@
 <?php
 
-Kirby::plugin('denisyilmaz/oembed', [
+Kirby::plugin('denisyilmaz/oembedpreview', [
     'fields' => [
-        'oembed' => [
-            'props' => [
-                'message' => 'Inhalt aus oembed.php'
-            ]
-        ]
+        'oembed' => []
     ]
 ]);

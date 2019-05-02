@@ -1,4 +1,4 @@
-import oembed from "./components/oembed.vue";
+import oembed from "./components/oEmbed.vue";
 
 panel.plugin("denisyilmaz/oembed", {
   fields: {
