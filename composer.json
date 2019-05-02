@@ -1,9 +1,14 @@
 {
     "name": "denisyilmaz/oembed",
-    "description": "Kirby 3 oEmbed Field",
+    "description": "Kirby 3 oembed Field",
     "version": "0.0.0",
     "type": "kirby-plugin",
     "license": "MIT",
+    "autoload": {
+        "files": [
+            "fields/oembed.php"
+        ]
+    },
     "authors": [
         {
             "name": "Denis Yilmaz",

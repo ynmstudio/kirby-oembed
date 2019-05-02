@@ -1,5 +1,10 @@
 <template>
-  <k-field :label="label" class="oembed-field" v-on-click-outside="onClickOutside">
+  <k-field
+    :label="label"
+    class="oembed-field"
+    :class="classObject"
+    v-on-click-outside="onClickOutside"
+  >
     <div class="oembed-field__input">
       <k-input
         class="oembed-field__text-input"
@@ -10,12 +15,16 @@
         @focus="open"
       />
     </div>
+    <k-input v-model="color"></k-input>
     <div class="oembed-field__wrapper" v-show="active">
-      <oembed-preview
+      <VEmbed :id="gist" :options="{ emoji: true }">
+        <p>https://gist.github.com/yyx990803/7cfec746bb8cd6ae05e72f30104c0d51</p>
+      </VEmbed>
+      <!-- <oembed-preview
         v-model="color"
         class="oembed-field__picker"
         :class="{'oembed-field__picker--no-alpha': !editableAlpha}"
-      />
+      />-->
     </div>
   </k-field>
 </template>
@@ -26,7 +35,7 @@ import Vue from "vue";
 import VEmbed from "vue-embed";
 export default {
   components: {
-    "oembed-preview": VEmbed
+    VEmbed
   },
   mixins: [onClickOutside],
   props: {

@@ -1,0 +1,41 @@
+.oembed-field {
+  position: relative;
+}
+.oembed-field .oembed-field__picker {
+  width: 300px;
+  box-shadow: none;
+}
+.oembed-field__wrapper {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(22, 23, 26, 0.2);
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+}
+.oembed-field__presets {
+  display: flex;
+  padding-left: 8px;
+}
+.oembed-field__preset {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  transform: scale(1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.oembed-field__preset--active {
+  transform: scale(0.8);
+}
+.oembed-field__picker .vc-chrome-color-wrap {
+  display: none;
+}
+.oembed-field__picker .vc-saturation-pointer {
+  transform: translate(-50%, -50%);
+}
+.oembed-field__picker--no-alpha .vc-chrome-alpha-wrap,
+.oembed-field__picker--no-alpha .vc-chrome-field:nth-child(3) {
+  display: none;
+}

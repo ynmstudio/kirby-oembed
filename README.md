@@ -1,3 +1,3 @@
-# Kirby 3 oEmbed Field
+# Kirby 3 oembed Field
 
-oEmbed field for Kirby 3
+oembed field for Kirby 3
